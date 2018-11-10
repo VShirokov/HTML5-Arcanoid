@@ -68,7 +68,7 @@ gulp.task('watch', ['min_script','css_min'], function () {
 	gulp.watch('dist/css/**/*.css', browserSync.reload);
 	gulp.watch('dist/**/*.html', browserSync.reload);
 	gulp.watch('src/js/*.js', ['min_script'], browserSync.reload);
-	gulp.watch('dist/js/*.js', browserSync.reload);
+	gulp.watch('dist/js/**/*.js', browserSync.reload);
 });
 
 gulp.task('build',['clean','img', 'css_min', 'min_script', 'pug_html', 'generate-favicon', 'inject-favicon-markups'], function() {
